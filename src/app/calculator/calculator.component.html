@@ -1,0 +1,40 @@
+<!-- calculator.component.html -->
+<div class="calculator">
+  <form name="calcForm">
+    <input
+      name="value"
+      type="text"
+      class="display"
+      [(ngModel)]="currentValue"
+    />
+  </form>
+
+  <div class="numbers-section">
+    <div>
+      <button class="btn btn-number" (click)="appendToDisplay('1')">1</button>
+      <button class="btn btn-number" (click)="appendToDisplay('2')">2</button>
+      <button class="btn btn-number" (click)="appendToDisplay('3')">3</button>
+    </div>
+    <div>
+      <button class="btn btn-number" (click)="appendToDisplay('4')">4</button>
+      <button class="btn btn-number" (click)="appendToDisplay('5')">5</button>
+      <button class="btn btn-number" (click)="appendToDisplay('6')">6</button>
+    </div>
+    <div>
+      <button class="btn btn-number" (click)="appendToDisplay('7')">7</button>
+      <button class="btn btn-number" (click)="appendToDisplay('8')">8</button>
+      <button class="btn btn-number" (click)="appendToDisplay('9')">9</button>
+    </div>
+    <div>
+      <button class="btn btn-number" (click)="appendToDisplay('0')">0</button>
+    </div>
+  </div>
+  <div class="operations">
+    <button class="btn btn-operation" (click)="handleOp('add')">+</button>
+    <button class="btn btn-operation" (click)="handleOp('sub')">-</button>
+    <button class="btn btn-operation" (click)="handleOp('div')">/</button>
+    <button class="btn btn-operation" (click)="handleOp('mul')">*</button>
+    <button class="btn btn-operation" (click)="calculateResult()">=</button>
+    <button class="btn btn-operation" (click)="reset()">C</button>
+  </div>
+</div>
