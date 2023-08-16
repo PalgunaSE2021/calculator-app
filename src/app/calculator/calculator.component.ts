@@ -36,6 +36,7 @@ export class CalculatorComponent {
   reset = () => {
     this.currentValue = '';
     this.opration = '';
+    this.result = 0;
   };
 
   calculateResult() {
